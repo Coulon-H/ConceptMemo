@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1E2761"
-    tools:context=".RegisterActivity">
+    android:background="@drawable/gradient_back"
+    >
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="160dp"
-        android:layout_height="34dp"
+        android:layout_width="181dp"
+        android:layout_height="44dp"
         android:gravity="center"
         android:text="Register"
-        android:textSize="22sp"
         android:textColor="#408EC6"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -31,7 +31,6 @@
         android:hint="UserName"
         android:inputType="textPersonName"
         android:textColorHint="#408EC6"
-        android:drawableLeft="@drawable/ic_baseline_account_circle_24"
         android:paddingLeft="15dp"
         android:drawablePadding="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -49,7 +48,7 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        android:drawableLeft="@drawable/ic_baseline_lock_24"
+
         android:paddingLeft="15dp"
         android:drawablePadding="15dp"
         android:textColorHint="#408EC6"
@@ -69,7 +68,7 @@
         android:hint="E-Mail"
         android:inputType="textEmailAddress"
         android:textColorHint="#408EC6"
-        android:drawableLeft="@drawable/ic_baseline_email_24"
+
         android:paddingLeft="15dp"
         android:drawablePadding="15dp"
         app:layout_constraintBottom_toTopOf="@+id/passwordSetter"
