@@ -9,8 +9,8 @@
 
     <FrameLayout
         android:id="@+id/layout_frame"
-        android:layout_width="403dp"
-        android:layout_height="541dp"
+        android:layout_width="413dp"
+        android:layout_height="532dp"
         app:layout_constraintBottom_toBottomOf="@+id/bottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
