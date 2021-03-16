@@ -11,9 +11,5 @@
         android:title="Formations"
         android:icon="@drawable/ic_baseline_school_24"/>
 
-    <item
-        android:id="@+id/presentation"
-        android:title="Presentation"
-        android:icon="@drawable/ic_baseline_menu_book_24"/>
 
 </menu>

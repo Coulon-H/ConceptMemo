@@ -1,7 +1,11 @@
 package com.example.sign;
 
 public class Formation {
-    private String titre, description;
+    private String titre, description, lien, date_d, date_f, lieu;
+
+    public Formation() {
+        titre = description = lien = date_d = date_f = lieu = "";
+    }
 
     public Formation(String titre, String description) {
         this.titre = titre;
@@ -22,5 +26,37 @@ public class Formation {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getLien() {
+        return lien;
+    }
+
+    public void setLien(String lien) {
+        this.lien = lien;
+    }
+
+    public String getDate_f() {
+        return date_f;
+    }
+
+    public void setDate_f(String date_f) {
+        this.date_f = date_f;
+    }
+
+    public String getDate_d() {
+        return date_d;
+    }
+
+    public void setDate_d(String date_d) {
+        this.date_d = date_d;
+    }
+
+    public String getLieu() {
+        return lieu;
+    }
+
+    public void setLieu(String lieu) {
+        this.lieu = lieu;
     }
 }
