@@ -10,17 +10,53 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <Button
+            android:id="@+id/cn"
+            android:layout_width="184dp"
+            android:layout_height="45dp"
+            android:text="cn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.86" />
+
+        <Button
+            android:id="@+id/auf"
+            android:layout_width="184dp"
+            android:layout_height="45dp"
+            android:text="AUF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.695" />
+
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="281dp"
-            android:layout_height="52dp"
+            android:layout_width="364dp"
+            android:layout_height="152dp"
             android:text="Home Fragment"
             android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.315"
+            app:layout_constraintHorizontal_bias="0.489"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.029" />
+            app:layout_constraintVertical_bias="0.266" />
+
+        <Button
+            android:id="@+id/cnfl"
+            android:layout_width="184dp"
+            android:layout_height="45dp"
+            android:text="CNFL"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.526" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

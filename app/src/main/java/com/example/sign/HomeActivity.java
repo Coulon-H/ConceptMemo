@@ -7,16 +7,10 @@ import androidx.fragment.app.Fragment;
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.view.View;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.Volley;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -39,7 +33,18 @@ public class HomeActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.layout_frame
-                        ,new HomeFragment()).commit();
+                        ,new HomeFragment(
+                                v -> {
+                                    getSupportFragmentManager().beginTransaction()
+                                            .replace(R.id.layout_frame
+                                                    ,new FormationFragment(progressDialog, "CNFL")).commit();
+                                },
+                                v -> {
+                                    getSupportFragmentManager().beginTransaction()
+                                            .replace(R.id.layout_frame
+                                                    ,new FormationFragment(progressDialog, "AUF")).commit();
+                                }
+                        )).commit();
 
     }
 
@@ -50,14 +55,17 @@ public class HomeActivity extends AppCompatActivity {
 
         switch (item.getItemId()){
             case R.id.home:
-                selectedFragment = new HomeFragment();
+                selectedFragment = new HomeFragment(v -> {
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.layout_frame
+                                    ,new FormationFragment(progressDialog, "CNFL")).commit();
+                },
+                        v -> {
+                            getSupportFragmentManager().beginTransaction()
+                                    .replace(R.id.layout_frame
+                                            ,new FormationFragment(progressDialog, "AUF")).commit();
+                        });
                 break;
-            case R.id.formation:
-                //Retrieve();
-                selectedFragment = new FormationFragment(progressDialog);
-                break;
-            /*case R.id.presentation:
-                selectedFragment = new AboutFragment();*/
         }
 
         assert selectedFragment != null;
@@ -68,32 +76,6 @@ public class HomeActivity extends AppCompatActivity {
         return true;
     };
 
-    private void Retrieve() {// méthode d'enregistrement
-
-        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, URL_REQUEST, null,
-                response -> {
-                    for (int i = 0; i < response.length(); i++) {
-                        try {
-                            JSONObject j = response.getJSONObject(i);
-                            Formation f = new Formation();
-                            f.setTitre(j.getString("name").trim());
-                            f.setDescription(j.getString("password").trim());
-                            f.setDate_d(j.getString("date_debut").trim());
-                            list.add(f);
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }, error -> {
-
-                }
-        );
-
-
-        requestQueue.add(jsonArrayRequest);
-    }
 
 
 

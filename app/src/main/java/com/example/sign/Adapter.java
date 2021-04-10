@@ -41,7 +41,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyView> {
     public void onBindViewHolder(@NonNull MyView holder, int position) {
         Formation f = list.get(position);
         holder.title.setText(f.getTitre());
-        holder.description.setText("Lieu : " + f.getLieu());
         holder.date.setText(f.getDate_d());
     }
 
@@ -59,7 +58,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyView> {
             super(itemView);
 
             title = itemView.findViewById(R.id.titleC);
-            description = itemView.findViewById(R.id.description);
             date = itemView.findViewById(R.id.date);
             clickListen = n;
 

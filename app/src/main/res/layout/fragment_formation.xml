@@ -12,18 +12,14 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler"
-            android:layout_width="381dp"
+            android:layout_width="match_parent"
             android:layout_height="539dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginRight="15dp"
-            android:padding="2dp"
-            app:layout_goneMarginLeft="5dp"
-            app:layout_goneMarginRight="5dp"
+            android:padding="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginLeft="5dp"
+            app:layout_goneMarginRight="5dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

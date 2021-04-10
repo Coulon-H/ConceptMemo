@@ -31,14 +31,15 @@ import java.util.Objects;
 public class FormationFragment extends Fragment implements Adapter.clickListener {
 
     //private final String URL_REQUEST = "http://192.168.1.95:8000/api/list/actual/?format=json";
-    private final String URL_REQUEST = "https://hyrvin.pythonanywhere.com/api/list/actual/?format=json";
+    private String URL_REQUEST;
     private RecyclerView recyclerView;
     private Adapter a;
     private ArrayList<Formation> list = new ArrayList<>();
 
     ProgressDialog progressDialog;
 
-    public FormationFragment(ProgressDialog progressDialog) {
+    public FormationFragment(ProgressDialog progressDialog, String tag) {
+        URL_REQUEST = "https://hyrvin.pythonanywhere.com/api/list/" + tag + "/?format=json";
         setProgressDialog(progressDialog);
         a = new Adapter(list, R.layout.model_bloc, this);
     }
