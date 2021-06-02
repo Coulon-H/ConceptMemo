@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
-import android.os.Bundle;
+import android.os.Bundle; 
 import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -16,7 +16,6 @@ import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private final String URL_REQUEST = "http://192.168.1.95:8000/api/list/?format=json";
     BottomNavigationView bottom;
     ArrayList<Formation> list;
     ProgressDialog progressDialog;
