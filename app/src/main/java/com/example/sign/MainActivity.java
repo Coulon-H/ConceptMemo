@@ -16,14 +16,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent i = new Intent(MainActivity.this, HomeActivity.class);
-                startActivity(i);
+        new Handler().postDelayed(() -> {
+            Intent i = new Intent(MainActivity.this, HomeActivity.class);
+            startActivity(i);
 
-                finish();
-            }
+            finish();
         }, SPLASH_TIME);
     }
 }

@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class AboutFragment extends Fragment {
+/*public class AboutFragment extends Fragment {
 
 
     public AboutFragment() {
@@ -22,4 +22,4 @@ public class AboutFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_about, container, false);
     }
-}
+}*/

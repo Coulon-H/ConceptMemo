@@ -25,7 +25,7 @@ import java.util.Objects;
 
 public class FormationFragment extends Fragment implements Adapter.clickListener {
 
-    //private final String URL_REQUEST = "http://192.168.1.95:8000/api/list/actual/?format=json";
+
     private final String URL_REQUEST;
     private RecyclerView recyclerView;
     private Adapter a;

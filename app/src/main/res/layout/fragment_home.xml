@@ -36,8 +36,8 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textView3"
-            android:layout_width="357dp"
-            android:layout_height="95dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:padding="1dp"
             android:text="Campus numérique francophone de Libreville Allée du Rectorat, 3e Batiment à gauche, Libreville, Gabon + AUF Afrique Centrale et Grands Lacs"
             android:textColor="@android:color/darker_gray"
@@ -73,8 +73,8 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textView4"
-            android:layout_width="245dp"
-            android:layout_height="67dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Téléphone: +241 01 44 45 09 Télécopie: +241 01 44 45 17 Courriel: info@ga.auf.org"
             android:textColor="@android:color/darker_gray"
             android:textSize="17sp"
