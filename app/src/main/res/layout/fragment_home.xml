@@ -8,25 +8,27 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="MissingClass">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/cn"
             android:layout_width="184dp"
             android:layout_height="45dp"
-            android:text="cn"
+            android:text="cef"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.86" />
+            app:layout_constraintVertical_bias="0.86"
+            tools:ignore="HardcodedText" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/auf"
             android:layout_width="184dp"
             android:layout_height="45dp"
-            android:text="AUF"
+            android:text="incubateur"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -75,7 +77,9 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Téléphone: +241 01 44 45 09 Télécopie: +241 01 44 45 17 Courriel: info@ga.auf.org"
+            android:text="Téléphone: +241 01 44 45 09
+            Télécopie: +241 01 44 45 17
+            Courriel: info@ga.auf.org"
             android:textColor="@android:color/darker_gray"
             android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="parent"
