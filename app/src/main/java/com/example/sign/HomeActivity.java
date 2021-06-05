@@ -42,6 +42,11 @@ public class HomeActivity extends AppCompatActivity {
                                     getSupportFragmentManager().beginTransaction()
                                             .replace(R.id.layout_frame
                                                     ,new FormationFragment(progressDialog, "AUF")).commit();
+                                },
+                                v -> {
+                                    getSupportFragmentManager().beginTransaction()
+                                            .replace(R.id.layout_frame
+                                                    ,new FormationFragment(progressDialog, "CEF")).commit();
                                 }
                         )).commit();
 
@@ -63,7 +68,13 @@ public class HomeActivity extends AppCompatActivity {
                             getSupportFragmentManager().beginTransaction()
                                     .replace(R.id.layout_frame
                                             ,new FormationFragment(progressDialog, "AUF")).commit();
-                        });
+                        },
+                        v -> {
+                            getSupportFragmentManager().beginTransaction()
+                                    .replace(R.id.layout_frame
+                                            ,new FormationFragment(progressDialog, "CEF")).commit();
+                        }
+                );
                 break;
         }
 
