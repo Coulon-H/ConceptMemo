@@ -14,8 +14,8 @@
         android:theme="@style/Theme.Sign"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".HomeActivity">
-        </activity>
+        <activity android:name=".FormActivity"></activity>
+        <activity android:name=".HomeActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -59,7 +59,7 @@ public class FormationFragment extends Fragment implements Adapter.clickListener
 
     private void Retrieve() {// méthode d'enregistrement
 
-        RequestQueue requestQueue = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
+        RequestQueue requestQueue = Volley.newRequestQueue(requireContext());
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, URL_REQUEST, null,
                 response -> {
@@ -76,8 +76,7 @@ public class FormationFragment extends Fragment implements Adapter.clickListener
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-                        //System.out.println(list);
-                        //recyclerView.setAdapter(new Adapter(list, R.layout.model_bloc));
+
                         a.notifyDataSetChanged();
                     }
                 }, error -> {
@@ -96,6 +95,7 @@ public class FormationFragment extends Fragment implements Adapter.clickListener
     @Override
     public void onClickListener(int position) {
         Uri u = Uri.parse(list.get(position).getLien());
+        Intent i = new Intent(String.valueOf(FormActivity.class));
         startActivity(new Intent(Intent.ACTION_VIEW, u));
     }
 
