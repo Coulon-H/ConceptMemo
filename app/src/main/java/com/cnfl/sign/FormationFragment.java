@@ -1,4 +1,4 @@
-package com.example.sign;
+package com.cnfl.sign;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -21,7 +21,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class FormationFragment extends Fragment implements Adapter.clickListener {
 

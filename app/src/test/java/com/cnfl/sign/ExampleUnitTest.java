@@ -1,4 +1,4 @@
-package com.example.sign;
+package com.cnfl.sign;
 
 import org.junit.Test;
 

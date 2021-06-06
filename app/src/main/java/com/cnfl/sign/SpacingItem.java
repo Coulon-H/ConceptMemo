@@ -1,4 +1,4 @@
-package com.example.sign;
+package com.cnfl.sign;
 
 import android.graphics.Rect;
 import android.view.View;

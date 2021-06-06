@@ -1,4 +1,4 @@
-package com.example.sign;
+package com.cnfl.sign;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,8 +6,7 @@ import androidx.fragment.app.Fragment;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
-import android.os.Bundle; 
-import android.view.View;
+import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 

@@ -1,4 +1,4 @@
-package com.example.sign;
+package com.cnfl.sign;
 
 public class Formation {
     private String titre, description, lien, date_d, date_f, lieu;
