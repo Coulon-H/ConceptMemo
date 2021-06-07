@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.cnfl.sign">
+    package="com.cnfl.sign" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -13,9 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sign"
         android:usesCleartextTraffic="true"
-        tools:targetApi="m">
-        <activity android:name="com.cnfl.sign.HomeActivity" />
-        <activity android:name="com.cnfl.sign.MainActivity">
+        tools:targetApi="m" >
+        <activity android:name=".FormActivity" android:configChanges="orientation|screenLayout">
+        </activity>
+        <activity android:name=".HomeActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".MainActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

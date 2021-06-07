@@ -66,6 +66,7 @@ public class FormationFragment extends Fragment implements Adapter.clickListener
                         try {
                             JSONObject j = response.getJSONObject(i);
                             Formation f = new Formation();
+                            f.setId(j.getInt("id"));
                             f.setTitre(j.getString("title").trim());
                             f.setDescription(j.getString("description").trim());
                             f.setLieu(j.getString("lieu").trim());
@@ -93,9 +94,11 @@ public class FormationFragment extends Fragment implements Adapter.clickListener
 
     @Override
     public void onClickListener(int position) {
-        Uri u = Uri.parse(list.get(position).getLien());
-        Intent i = new Intent(String.valueOf(FormActivity.class));
-        startActivity(new Intent(Intent.ACTION_VIEW, u));
+        Intent i = new Intent(getContext(), FormActivity.class);
+        i.putExtra("id", list.get(position).getId());
+        i.putExtra("Title", list.get(position).getTitre());
+        i.putExtra("description", list.get(position).getDescription());
+        startActivity(i);
     }
 
     private void setProgressDialog(ProgressDialog progressDialog){

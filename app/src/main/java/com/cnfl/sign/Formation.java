@@ -2,8 +2,10 @@ package com.cnfl.sign;
 
 public class Formation {
     private String titre, description, lien, date_d, date_f, lieu;
+    private int id;
 
     public Formation() {
+        id = 0;
         titre = description = lien = date_d = date_f = lieu = "";
     }
 
@@ -58,5 +60,13 @@ public class Formation {
 
     public void setLieu(String lieu) {
         this.lieu = lieu;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
