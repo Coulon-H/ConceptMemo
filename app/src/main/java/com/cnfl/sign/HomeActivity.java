@@ -40,7 +40,7 @@ public class HomeActivity extends AppCompatActivity {
                                 v -> {
                                     getSupportFragmentManager().beginTransaction()
                                             .replace(R.id.layout_frame
-                                                    ,new FormationFragment(progressDialog, "AUF")).commit();
+                                                    ,new FormationFragment(progressDialog, "INCUBATEUR")).commit();
                                 },
                                 v -> {
                                     getSupportFragmentManager().beginTransaction()
@@ -66,7 +66,7 @@ public class HomeActivity extends AppCompatActivity {
                         v -> {
                             getSupportFragmentManager().beginTransaction()
                                     .replace(R.id.layout_frame
-                                            ,new FormationFragment(progressDialog, "AUF")).commit();
+                                            ,new FormationFragment(progressDialog, "INCUBATEUR")).commit();
                         },
                         v -> {
                             getSupportFragmentManager().beginTransaction()

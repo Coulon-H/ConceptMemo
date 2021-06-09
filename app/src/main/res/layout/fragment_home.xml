@@ -69,6 +69,7 @@
             android:layout_height="45dp"
             android:layout_marginStart="60dp"
             android:layout_marginLeft="60dp"
+            android:layout_marginTop="3dp"
             android:layout_marginEnd="60dp"
             android:layout_marginRight="60dp"
             android:text="CNFL"
@@ -77,16 +78,17 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:layout_constraintVertical_bias="0.024" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
-            android:layout_marginLeft="80dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="5dp"
             android:text="Téléphone: +241 01 44 45 09"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@android:color/holo_blue_bright"
             android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -99,18 +101,18 @@
             android:id="@+id/textView2"
             android:layout_width="252dp"
             android:layout_height="26dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="100dp"
             android:layout_marginRight="100dp"
             android:text="Courriel: info@ga.auf.org"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@android:color/holo_blue_bright"
             android:textSize="17sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
             tools:ignore="MissingConstraints" />
 
         <ImageView
@@ -119,7 +121,6 @@
             android:layout_height="136dp"
             android:layout_marginStart="150dp"
             android:layout_marginLeft="150dp"
-            android:layout_marginTop="4dp"
             android:layout_marginEnd="150dp"
             android:layout_marginRight="150dp"
             android:src="@mipmap/ic_launcher_round"
@@ -131,18 +132,18 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="100dp"
             android:layout_marginRight="100dp"
             android:text="Télécopie: +241 01 44 45 17"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@android:color/holo_blue_bright"
             android:textSize="17sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
