@@ -33,7 +33,7 @@ public class FormationFragment extends Fragment implements Adapter.clickListener
     ProgressDialog progressDialog;
 
     public FormationFragment(ProgressDialog progressDialog, String tag) {
-        URL_REQUEST = "https://hyrvin.pythonanywhere.com/api/list/" + tag + "/?format=json";
+        URL_REQUEST = "https://jazzs.pythonanywhere.com/api/list/" + tag + "/?format=json";
         setProgressDialog(progressDialog);
         a = new Adapter(list, R.layout.model_bloc, this);
     }
@@ -71,7 +71,6 @@ public class FormationFragment extends Fragment implements Adapter.clickListener
                             f.setDescription(j.getString("description").trim());
                             f.setLieu(j.getString("lieu").trim());
                             f.setDate_d(j.getString("date_debut").trim());
-                            f.setLien(j.getString("lien"));
                             list.add(f);
                         } catch (JSONException e) {
                             e.printStackTrace();

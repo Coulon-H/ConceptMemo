@@ -29,10 +29,10 @@ public class FormActivity extends AppCompatActivity {
     TextView Title, Description;
     EditText Name, Surname, Email, Structure;
     Button Sign;
-    static boolean check;
+    static boolean check = false;
     int id;
 
-    private final String URL_REQUEST = "https://hyrvin.pythonanywhere.com/api/list/signup/";
+    private final String URL_REQUEST = "https://jazzs.pythonanywhere.com/api/list/signup/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,7 @@ public class FormActivity extends AppCompatActivity {
         setContentView(R.layout.activity_form);
 
 
-        check = false;
+
         Title = findViewById(R.id.Title);
         Description = findViewById(R.id.Description);
         Name = findViewById(R.id.Name);
@@ -67,7 +67,7 @@ public class FormActivity extends AppCompatActivity {
     }
 
     private void verify(String error){
-        if(check == true) {
+        if(!check) {
             if (Name.getText().toString().isEmpty()) {
                 Name.setError(error);
             }
@@ -82,11 +82,13 @@ public class FormActivity extends AppCompatActivity {
             }
         }
 
-        if(check)
-            check = true;
+        check = true;
+        if (!Email.getText().toString().isEmpty() && !Email.getText().toString().matches("[a-zA-Z0-9._-]+@[a-z]+\\.[a-z]+")) {
+            Email.setError("Adresse Email Incorrect");
+        }
 
         if(!Name.getText().toString().isEmpty() && !Surname.getText().toString().isEmpty()
-                && !Email.getText().toString().isEmpty() && !Structure.getText().toString().isEmpty())
+                && !Email.getText().toString().isEmpty() && !Structure.getText().toString().isEmpty() && Email.getText().toString().matches("[a-zA-Z0-9._-]+@[a-z]+\\.[a-z]+"))
             Signin(Name.getText().toString(), Surname.getText().toString(), Email.getText().toString(), Structure.getText().toString());
     }
 
@@ -104,7 +106,7 @@ public class FormActivity extends AppCompatActivity {
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();
-                        Toast.makeText(FormActivity.this, e.toString(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(FormActivity.this, "Inscription Echoué. Veuillez Réessayer.", Toast.LENGTH_LONG).show();
                     }
                 },
                 error -> Toast.makeText(FormActivity.this, error.toString(), Toast.LENGTH_LONG).show()){
